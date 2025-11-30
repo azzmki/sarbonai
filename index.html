@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarbonay – AI Travel Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans scroll-smooth">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="font-bold text-xl text-indigo-600">Sarbonay</h1>
+    <div class="space-x-4 text-gray-700 font-medium flex items-center">
+      <a href="#home" class="nav-link hover:text-indigo-600" data-key="home">Home</a>
+      <a href="#problems" class="nav-link hover:text-indigo-600" data-key="problems">Problems & Solutions</a>
+      <a href="#team" class="nav-link hover:text-indigo-600" data-key="team">Team</a>
+      <a href="#teampower" class="nav-link hover:text-indigo-600" data-key="teampower">Team Power</a>
+      <a href="#roadmap" class="nav-link hover:text-indigo-600" data-key="roadmap">Roadmap</a>
+      <a href="#howwe" class="nav-link hover:text-indigo-600" data-key="howwe">How We Solve</a>
+      <a href="#contact" class="nav-link hover:text-indigo-600" data-key="contact">Contact</a>
+
+      <!-- Language Selector -->
+      <select id="languageSelector" class="ml-4 border rounded px-2 py-1">
+        <option value="uz">UZ</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="pt-28 pb-20 text-center bg-indigo-50">
+  <h1 class="text-5xl font-bold text-indigo-700 mb-4" data-key="homeTitle">Sarbonay AI Travel Automation</h1>
+  <p class="text-gray-700 max-w-3xl mx-auto text-lg" data-key="homeDesc">
+    Sun'iy intellekt yordamida sayyohlik agentliklari va tur-operatorlar uchun barcha xizmatlarni avtomatlashtiradi.
+  </p>
+  <div class="mt-8">
+    <a href="#problems" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition" data-key="learnMore">Learn More</a>
+  </div>
+</section>
+
+<!-- Problems & Solutions Section -->
+<section id="problems" class="pt-28 pb-20 text-center">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="problemsTitle">Ayni vaqtda: Sayohat sohasidagi dolzarb muammolar</h2>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 text-center mb-12">
+    <div class="cursor-pointer" onclick="toggleSolution('solution1')">
+      <img src="https://img.icons8.com/fluency/48/000000/booking.png" class="mx-auto mb-2" />
+      <h3 class="text-lg font-semibold">Avtomatlashtirilgan booking</h3>
+    </div>
+    <div class="cursor-pointer" onclick="toggleSolution('solution2')">
+      <img src="https://img.icons8.com/fluency/48/000000/customer-support.png" class="mx-auto mb-2" />
+      <h3 class="text-lg font-semibold">24/7 mijoz qo‘llab-quvvatlash</h3>
+    </div>
+    <div class="cursor-pointer" onclick="toggleSolution('solution3')">
+      <img src="https://img.icons8.com/fluency/48/000000/money.png" class="mx-auto mb-2" />
+      <h3 class="text-lg font-semibold">Xavfsiz va kafolatli to‘lovlar</h3>
+    </div>
+    <div class="cursor-pointer" onclick="toggleSolution('solution4')">
+      <img src="https://img.icons8.com/fluency/48/000000/travel.png" class="mx-auto mb-2" />
+      <h3 class="text-lg font-semibold">Mos keluvchi tur paketlar</h3>
+    </div>
+    <div class="cursor-pointer" onclick="toggleSolution('solution5')">
+      <img src="https://img.icons8.com/fluency/48/000000/ai.png" class="mx-auto mb-2" />
+      <h3 class="text-lg font-semibold">AI yordamchisi bilan shaxsiy tavsiyalar</h3>
+    </div>
+  </div>
+
+<div class="max-w-6xl mx-auto px-4 space-y-12">
+    <div id="solution1" class="hidden bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">Sarbonay’dan so‘ng: Avtomatik Booking</h3>
+      <p class="text-gray-700 mb-3">Barcha bronlar avtomatik tarzda markazlashtiriladi, xatoliklar kamayadi va tezkor xizmat ta’minlanadi.</p>
+      <img src="https://via.placeholder.com/800x400" class="rounded-lg w-full">
+    </div>
+    <div id="solution2" class="hidden bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">Sarbonay’dan so‘ng: 24/7 Qo‘llab-quvvatlash</h3>
+      <p class="text-gray-700 mb-3">AI chat-bot orqali mijozlar istalgan vaqtda savollariga javob oladi.</p>
+      <img src="https://via.placeholder.com/800x400" class="rounded-lg w-full">
+    </div>
+    <div id="solution3" class="hidden bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">Sarbonay’dan so‘ng: Xavfsiz To‘lovlar</h3>
+      <p class="text-gray-700 mb-3">To‘lovlar shifrlangan va kafolatli amalga oshiriladi.</p>
+      <img src="https://via.placeholder.com/800x400" class="rounded-lg w-full">
+    </div>
+    <div id="solution4" class="hidden bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">Sarbonay’dan so‘ng: Mos keluvchi tur paketlar</h3>
+      <p class="text-gray-700 mb-3">AI mijozning istaklari va byudjeti asosida shaxsiy tur paketlarini yaratadi.</p>
+      <img src="https://via.placeholder.com/800x400" class="rounded-lg w-full">
+    </div>
+    <div id="solution5" class="hidden bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-bold text-indigo-600 mb-3">Sarbonay’dan so‘ng: AI Shaxsiy Tavsiyalar</h3>
+      <p class="text-gray-700 mb-3">AI mijozning oldingi sayohatlari va tanlovlariga asoslanib shaxsiy tavsiyalar beradi.</p>
+      <img src="https://via.placeholder.com/800x400" class="rounded-lg w-full">
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="pt-28 pb-20 text-center bg-indigo-50">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="teamTitle">Bizning Jamoa</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+    <div class="bg-white shadow-lg rounded-2xl p-5 hover:shadow-2xl transition cursor-pointer w-64" onclick="location.href='member1.html'">
+      <img src="https://via.placeholder.com/300x300" class="rounded-xl w-full object-cover mb-4" alt="">
+      <h3 class="text-xl font-semibold flex justify-center items-center mb-1">
+        <img src="eldor.png" class="w-8 h-8 mr-2"/> Eldor Musayev
+      </h3>
+      <p class="text-indigo-600 font-medium">Founder & CEO</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-2xl p-5 hover:shadow-2xl transition cursor-pointer w-64" onclick="location.href='member2.html'">
+      <img src="https://via.placeholder.com/300x300" class="rounded-xl w-full object-cover mb-4" alt="">
+      <h3 class="text-xl font-semibold flex justify-center items-center mb-1">
+        <img src="hasan.png" class="w-8 h-8 mr-2"/> Murodov Hasan
+      </h3>
+      <p class="text-indigo-600 font-medium">CTO</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-2xl p-5 hover:shadow-2xl transition cursor-pointer w-64" onclick="location.href='member3.html'">
+      <img src="https://via.placeholder.com/300x300" class="rounded-xl w-full object-cover mb-4" alt="">
+      <h3 class="text-xl font-semibold flex justify-center items-center mb-1">
+        <img src="aziz.png.jpg" class="w-8 h-8 mr-2"/> Azizbek Xolniyozov
+      </h3>
+      <p class="text-indigo-600 font-medium">UI/UX Designer</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-2xl p-5 hover:shadow-2xl transition cursor-pointer w-64" onclick="location.href='member4.html'">
+      <img src="https://via.placeholder.com/300x300" class="rounded-xl w-full object-cover mb-4" alt="">
+
+
+<h3 class="text-xl font-semibold flex justify-center items-center mb-1">
+        <img src="akbar.png" class="w-8 h-8 mr-2"/> Isroilov Akbar
+      </h3>
+      <p class="text-indigo-600 font-medium">AI Engineer</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team Power Section -->
+<section id="teampower" class="pt-28 pb-20 text-center bg-gray-100">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="teamPowerTitle">Team Power</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+    <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Kuchli Texnik Stack</h3>
+      <p class="text-gray-700">Biz AI, Mobile & Web Development sohalarida ilg‘or texnologiyalarni qo‘llaymiz. Django, React, Flutter va Python asosida tezkor va ishonchli tizim yaratamiz.</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Oldingi Loyihalar</h3>
+      <p class="text-gray-700">Biz ilgari bir nechta turizm, e-commerce va AI startuplarda muvaffaqiyatli loyiha ishlab chiqdik, real foydalanuvchi tajribasini oshirdik.</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Motivatsiya va Innovatsiya</h3>
+      <p class="text-gray-700">Bizning jamoa yangi innovatsion yechimlar yaratishga, ichki va tashqi bozorni AI bilan o‘zgartirishga intiladi. Har bir qarorimiz mijoz tajribasini optimallashtirishga yo‘naltirilgan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Roadmap & Phases Section -->
+<section id="roadmap" class="pt-28 pb-20 text-center bg-indigo-50">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="roadmapTitle">Yo‘l xaritasi & bosqich</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2">G‘oya</h3>
+      <p class="text-gray-700">Tizim konseptini ishlab chiqish va bozor tadqiqotini boshlash</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2">Prototip</h3>
+      <p class="text-gray-700">AI modulini va interfeys dizaynini prototip sifatida yaratish</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2">MVP</h3>
+      <p class="text-gray-700">Minimal funksional ilova va web sahifani ishga tushirish</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ishga tushirilgan</h3>
+      <p class="text-gray-700">Bozorga chiqarish va foydalanuvchi tajribasini kuzatish</p>
+    </div>
+  </div>
+  <div class="mt-12 text-gray-700 max-w-3xl mx-auto">
+    <p class="text-lg">Keyingi qadamlar: AI modullarini takomillashtirish, ichki va tashqi bozorlarni kengaytirish, foydalanuvchi tajribasini optimallashtirish va global miqyosga chiqish.</p>
+  </div>
+</section>
+
+
+<!-- How We Solve Section -->
+<section id="howwe" class="pt-28 pb-20 text-center bg-gray-100">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="howweTitle">Muammoni qanday hal qilmoqchimiz</h2>
+  <div class="max-w-5xl mx-auto space-y-8 text-left">
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Asosiy qadamlar</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Mijozlar ehtiyojlarini aniqlash va tur paketlarini avtomatlashtirish</li>
+        <li>Bronlarni markazlashtirish va xavfsiz tizim yaratish</li>
+        <li>AI yordamida shaxsiy tavsiyalar va chat-bot qo‘llab-quvvatlash</li>
+        <li>Mobil ilova va web interfeys orqali integratsiya</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Texnologiya & Vositalar</h3>
+      <p class="text-gray-700">
+        Django, React, Flutter, Python, TailwindCSS, PostgreSQL. AI texnologiyalari: Machine Learning, NLP, tavsiya tizimi.
+      </p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-3">AI Foydalanish</h3>
+      <p class="text-gray-700">
+        Mijoz tanlovi va profiling asosida shaxsiy tavsiyalar, bronlarni avtomatlashtirish, 24/7 qo‘llab-quvvatlash va optimal tur paketlar yaratish.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="pt-28 pb-20 text-center bg-gray-100">
+  <h2 class="text-4xl font-bold text-gray-800 mb-10" data-key="contactTitle">Aloqa</h2>
+  <div class="max-w-3xl mx-auto
